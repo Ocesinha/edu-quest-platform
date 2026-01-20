@@ -1,0 +1,132 @@
+<%- include('./include/header.ejs') %>
+<%- include('./include/navbar.ejs') %>
+
+        <!-- Page Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-text">
+                    <h1>Olá, <%= user.name.split(' ')[0] %>!</h1>
+                    <p>Pronto para mais uma sessão de estudos? Continue de onde parou.</p>
+                </div>
+                <% if(user.role === 'PROFESSOR') { %>
+                <a href="/criar-questao" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 8v8M8 12h8"/>
+                    </svg>
+                    Nova Questão
+                </a>
+                <% } %>
+            </section>
+
+            <!-- Stats Cards -->
+            <section class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-card-icon blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <div class="stat-card-info">
+                        <span class="stat-card-value"><%= user.questions.length || 0 %></span>
+                        <span class="stat-card-label">Questões Resolvidas</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                        </svg>
+                    </div>
+                    <div class="stat-card-info">
+                        <span class="stat-card-value"><%= user.correctPercentage || 0 %>%</span>
+                        <span class="stat-card-label">Taxa de Acerto</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon orange">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-card-info">
+                        <span class="stat-card-value"><%= user.streak || 0 %> dias</span>
+                        <span class="stat-card-label">Sequência Atual</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9H4.5a2.5 2.5 0 010-5H6"/>
+                            <path d="M18 9h1.5a2.5 2.5 0 000-5H18"/>
+                            <path d="M4 22h16"/>
+                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                            <path d="M18 2H6v7a6 6 0 1012 0V2z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-card-info">
+                        <span class="stat-card-value">#<%= user.ranking || '-' %></span>
+                        <span class="stat-card-label">Posição no Ranking</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Questions Section -->
+            <section class="questions-section">
+                <div class="section-header">
+                    <h2>Questões Recomendadas</h2>
+                    <a href="/questoes" class="view-all">Ver todas</a>
+                </div>
+
+                        <!-- Questão de exemplo caso não haja questões da API -->
+                        <div class="question-card" data-id="exemplo">
+                            <div class="question-card-header">
+                                <span class="question-category">Matemática</span>
+                                <span class="question-difficulty easy">Fácil</span>
+                            </div>
+                            <p class="question-text">Qual é o resultado da expressão: 2³ + 4² - 10?</p>
+                            <div class="question-options">
+                                <button class="option" data-index="0">
+                                    <span class="option-letter">A</span>
+                                    <span class="option-text">12</span>
+                                </button>
+                                <button class="option" data-index="1">
+                                    <span class="option-letter">B</span>
+                                    <span class="option-text">14</span>
+                                </button>
+                                <button class="option" data-index="2">
+                                    <span class="option-letter">C</span>
+                                    <span class="option-text">16</span>
+                                </button>
+                                <button class="option" data-index="3">
+                                    <span class="option-letter">D</span>
+                                    <span class="option-text">18</span>
+                                </button>
+                            </div>
+                            <div class="question-footer">
+                                <span class="question-subject">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                                    </svg>
+                                    Ensino Médio
+                                </span>
+                                <button class="btn-answer">Responder</button>
+                            </div>
+                </div>
+            </section>
+
+           
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Overlay para mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<%- include('./include/footer.ejs') %>

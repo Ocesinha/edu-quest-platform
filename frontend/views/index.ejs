@@ -1,0 +1,375 @@
+
+<%- include('./include/header.ejs') %>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>QuizMaster</span>
+            </a>
+            
+            <nav class="nav-desktop">
+                <a href="#categorias">Categorias</a>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#recursos">Recursos</a>
+                <a href="#planos">Planos</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="/login" class="btn-login">Entrar</a>
+                <a href="/register" class="btn-signup">Criar Conta</a>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <nav class="nav-mobile">
+            <a href="#categorias">Categorias</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#recursos">Recursos</a>
+            <a href="#planos">Planos</a>
+            <div class="mobile-actions">
+                <a href="/login" class="btn-login">Entrar</a>
+                <a href="/cadastro" class="btn-signup">Criar Conta</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">🎯 +50.000 questões disponíveis</span>
+                <h1>Domine qualquer <span class="highlight">assunto</span> com questões práticas</h1>
+                <p>A plataforma completa para você estudar, praticar e dominar qualquer matéria. Questões organizadas, feedback instantâneo e acompanhamento de progresso.</p>
+                <div class="hero-cta">
+                    <a href="/cadastro" class="btn-primary">
+                        Começar Grátis
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#como-funciona" class="btn-secondary">Saiba mais</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>50K+</strong>
+                        <span>Questões</span>
+                    </div>
+                    <div class="stat">
+                        <strong>100K+</strong>
+                        <span>Usuários</span>
+                    </div>
+                    <div class="stat">
+                        <strong>98%</strong>
+                        <span>Aprovação</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-category">Matemática</span>
+                        <span class="question-difficulty easy">Fácil</span>
+                    </div>
+                    <p class="question-text">Qual é o valor de x na equação 2x + 5 = 15?</p>
+                    <div class="question-options">
+                        <div class="option">A) x = 3</div>
+                        <div class="option">B) x = 4</div>
+                        <div class="option correct">C) x = 5</div>
+                        <div class="option">D) x = 6</div>
+                    </div>
+                    <div class="question-feedback">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Resposta correta!</span>
+                    </div>
+                </div>
+                <div class="floating-badge badge-1">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>+150 XP</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Sequência: 7 dias</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categorias" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Categorias</span>
+                <h2>Explore todas as <span class="highlight">matérias</span></h2>
+                <p>Questões organizadas por área do conhecimento para facilitar seus estudos</p>
+            </div>
+            <div class="categories-grid">
+                <a href="/categoria/matematica" class="category-card">
+                    <div class="category-icon math">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M4 4H20M4 8H20M4 12H12M4 16H12M16 12V20M13 17H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Matemática</h3>
+                    <p>8.500 questões</p>
+                </a>
+                <a href="/categoria/portugues" class="category-card">
+                    <div class="category-icon portuguese">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5V19.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Português</h3>
+                    <p>7.200 questões</p>
+                </a>
+                <a href="/categoria/historia" class="category-card">
+                    <div class="category-icon history">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>História</h3>
+                    <p>6.800 questões</p>
+                </a>
+                <a href="/categoria/geografia" class="category-card">
+                    <div class="category-icon geography">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M3.6 9H20.4M3.6 15H20.4M12 3C14.5 5.5 15.5 8.5 15.5 12C15.5 15.5 14.5 18.5 12 21C9.5 18.5 8.5 15.5 8.5 12C8.5 8.5 9.5 5.5 12 3Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Geografia</h3>
+                    <p>5.400 questões</p>
+                </a>
+                <a href="/categoria/ciencias" class="category-card">
+                    <div class="category-icon science">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M9 3H15M10 3V12L6 20H18L14 12V3M10 8H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Ciências</h3>
+                    <p>9.100 questões</p>
+                </a>
+                <a href="/categoria/ingles" class="category-card">
+                    <div class="category-icon english">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M5 8L10 12L5 16M13 16H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Inglês</h3>
+                    <p>4.600 questões</p>
+                </a>
+            </div>
+            <div class="categories-cta">
+                <a href="/categorias" class="btn-outline">Ver todas as categorias</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="como-funciona" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Como Funciona</span>
+                <h2>Simples, rápido e <span class="highlight">eficiente</span></h2>
+                <p>Comece a estudar em poucos minutos</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M16 21V19C16 16.7909 14.2091 15 12 15H5C2.79086 15 1 16.7909 1 19V21M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3M8.5 7C8.5 9.20914 6.70914 11 4.5 11C2.29086 11 0.5 9.20914 0.5 7C0.5 4.79086 2.29086 3 4.5 3C6.70914 3 8.5 4.79086 8.5 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Crie sua conta</h3>
+                    <p>Cadastre-se gratuitamente em menos de 1 minuto e personalize seu perfil de estudos.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Escolha o tema</h3>
+                    <p>Navegue pelas categorias e selecione a matéria ou assunto que deseja estudar.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Pratique e aprenda</h3>
+                    <p>Responda questões, receba feedback instantâneo e acompanhe sua evolução.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="recursos" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Recursos</span>
+                <h2>Tudo que você precisa para <span class="highlight">estudar</span></h2>
+                <p>Ferramentas poderosas para maximizar seu aprendizado</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card feature-large">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M16 8V16M12 11V16M8 14V16M6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Estatísticas Detalhadas</h3>
+                        <p>Acompanhe seu progresso com gráficos e métricas detalhadas. Veja suas áreas fortes e onde precisa melhorar.</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="stats-preview">
+                            <div class="stat-bar">
+                                <span>Matemática</span>
+                                <div class="progress"><div class="progress-fill" style="width: 85%"></div></div>
+                                <span>85%</span>
+                            </div>
+                            <div class="stat-bar">
+                                <span>Português</span>
+                                <div class="progress"><div class="progress-fill" style="width: 72%"></div></div>
+                                <span>72%</span>
+                            </div>
+                            <div class="stat-bar">
+                                <span>História</span>
+                                <div class="progress"><div class="progress-fill" style="width: 90%"></div></div>
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Feedback Instantâneo</h3>
+                    <p>Saiba imediatamente se acertou ou errou, com explicações detalhadas para cada questão.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Gamificação</h3>
+                    <p>Ganhe pontos, conquiste medalhas e suba no ranking enquanto aprende.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 18V22M12 18C8.68629 18 6 15.3137 6 12V5H18V12C18 15.3137 15.3137 18 12 18ZM6 10H18M9 2V5M15 2V5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Modo Simulado</h3>
+                    <p>Simule provas reais com tempo limitado e condições semelhantes às de exames oficiais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para começar sua jornada de estudos?</h2>
+                <p>Junte-se a mais de 100.000 estudantes que já estão aprendendo com o QuizMaster.</p>
+                <div class="cta-buttons">
+                    <a href="/cadastro" class="btn-primary">
+                        Criar Conta Grátis
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>QuizMaster</span>
+                    </a>
+                    <p>A plataforma completa para você dominar qualquer assunto através de questões práticas.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M22 4.01C21 4.5 20.02 4.69 19 5C17.879 3.735 16.217 3.665 14.62 4.263C13.023 4.861 12.004 6.323 12 8.01V9.01C8.755 9.085 5.865 7.605 4 5.01C4 5.01 -0.182 12.94 8 17.01C5.94 18.408 3.846 19.263 1 19.01C4.817 21.155 8.768 21.743 12.181 20.601C16.145 19.278 19.373 16.032 20.395 11.526C20.7176 10.1977 20.8787 8.83694 20.875 7.472C20.875 7.176 21.78 5.29 22 4.01Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M22.54 6.42C22.4212 5.94541 22.1793 5.51057 21.8387 5.15941C21.498 4.80824 21.0708 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50198 4.84824 2.16135 5.19941C1.82072 5.55057 1.57879 5.98541 1.46 6.46C1.14521 8.20556 0.991235 9.97631 1 11.75C0.988687 13.537 1.14266 15.3213 1.46 17.08C1.59096 17.5398 1.83831 17.9581 2.17814 18.2945C2.51798 18.6308 2.93882 18.8738 3.4 19C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0708 18.8668 21.498 18.6118 21.8387 18.2606C22.1793 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0113 9.96295 22.8573 8.1787 22.54 6.42Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9.75 15.02L15.5 11.75L9.75 8.48V15.02Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Produto</h4>
+                    <a href="#">Categorias</a>
+                    <a href="#">Recursos</a>
+                    <a href="#">Planos</a>
+                    <a href="#">Novidades</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Suporte</h4>
+                    <a href="#">Central de Ajuda</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Comunidade</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 QuizMaster. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+<%- include('./include/footer.ejs') %>
+

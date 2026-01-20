@@ -1,0 +1,66 @@
+.catalog {
+  padding: 40px;
+}
+
+.section-title {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.subject-card {
+  height: 180px;
+  border-radius: 14px;
+  padding: 20px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.subject-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+
+.subject-icon {
+  font-size: 42px;
+}
+
+.subject-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* 🎨 Gradientes */
+.gradient-1  { background: linear-gradient(135deg, #ff512f, #dd2476); }
+.gradient-2  { background: linear-gradient(135deg, #1d976c, #93f9b9); }
+.gradient-3  { background: linear-gradient(135deg, #5433ff, #20bdff); }
+.gradient-4  { background: linear-gradient(135deg, #56ab2f, #a8e063); }
+.gradient-5  { background: linear-gradient(135deg, #141e30, #243b55); }
+.gradient-6  { background: linear-gradient(135deg, #ff8008, #ffc837); }
+.gradient-7  { background: linear-gradient(135deg, #11998e, #38ef7d); }
+.gradient-8  { background: linear-gradient(135deg, #0575e6, #00f260); }
+.gradient-9  { background: linear-gradient(135deg, #f7971e, #ffd200); }
+.gradient-10 { background: linear-gradient(135deg, #3a1c71, #d76d77); }
+.gradient-11 { background: linear-gradient(135deg, #232526, #414345); }
+.gradient-12 { background: linear-gradient(135deg, #fc4a1a, #f7b733); }
+.gradient-13 { background: linear-gradient(135deg, #0f2027, #2c5364); }
+.gradient-14 { background: linear-gradient(135deg, #8360c3, #2ebf91); }
+.gradient-15 { background: linear-gradient(135deg, #c31432, #240b36); }
+
+.subject-card {
+  text-decoration: none;
+}
+
+.subject-card:visited {
+  color: inherit;
+}
