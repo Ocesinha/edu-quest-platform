@@ -32,29 +32,6 @@
                 </svg>
                 <span>Questões</span>
             </a>
-            <a href="/categorias" class="nav-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 20h16a2 2 0 002-2V8a2 2 0 00-2-2h-7.93a2 2 0 01-1.66-.9l-.82-1.2A2 2 0 007.93 3H4a2 2 0 00-2 2v13c0 1.1.9 2 2 2z"/>
-                </svg>
-                <span>Categorias</span>
-            </a>
-            <a href="/estatisticas" class="nav-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 20V10M12 20V4M6 20v-6"/>
-                </svg>
-                <span>Estatísticas</span>
-            </a>
-            <a href="/ranking" class="nav-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 9H4.5a2.5 2.5 0 010-5H6"/>
-                    <path d="M18 9h1.5a2.5 2.5 0 000-5H18"/>
-                    <path d="M4 22h16"/>
-                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-                    <path d="M18 2H6v7a6 6 0 1012 0V2z"/>
-                </svg>
-                <span>Ranking</span>
-            </a>
         </nav>
 
         <div class="sidebar-footer">
@@ -102,32 +79,7 @@
             </div>
 
             <div class="navbar-right">
-                <div class="stats-badges">
-                    <div class="stat-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span class="stat-value"><%= user.questions.length || 0 %></span>
-                        <span class="stat-label">Resolvidas</span>
-                    </div>
-                    <div class="stat-badge streak">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                        </svg>
-                        <span class="stat-value"><%= user.streak || 0 %></span>
-                        <span class="stat-label">Sequência</span>
-                    </div>
-                </div>
-
-                <button class="notification-btn">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                        <path d="M13.73 21a2 2 0 01-3.46 0"/>
-                    </svg>
-                    <span class="notification-dot"></span>
-                </button>
-
+   
                 <div class="user-menu" id="userMenu">
                     <button class="user-menu-toggle" id="userMenuToggle">
                         <div class="user-info">
